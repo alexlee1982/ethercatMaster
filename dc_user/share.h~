@@ -1,0 +1,33 @@
+#ifndef SHARE_H
+#define SHARE_H
+#include <stdint.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#include <errno.h>
+#define SHARE_DATA_SHARED_MEMORY_KEY    0x1000
+
+
+
+typedef struct
+{
+    uint8_t     head;
+    uint16_t    controlword;
+    uint8_t     op_mode;
+    int32_t     target_position;
+    uint16_t    statusword;
+    uint8_t     mode_display;
+    int32_t     actual_position;
+    uint8_t     tail;
+
+    uint8_t	clock_wise_turn;
+    uint8_t     unticlock_wise_turn;
+    uint8_t     stop
+
+    uint16_t    sync_mode;
+    uint32_t    cycle_time;
+    uint32_t    minimum_cycle_time;
+
+}ShareData;
+
+
+#endif // SHARE_H
