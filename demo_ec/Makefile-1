@@ -1,0 +1,14 @@
+XENO_CONFIG := /usr/xenomai/bin/xeno-config
+CFLAGS := $(shell $(XENO_CONFIG) --skin=posix --cflags)
+LDFLAGS := $(shell $(XENO_CONFIG) --skin=posix --ldflags)
+CC := $(shell $(XENO_CONFIG) --cc)
+
+EXECUTABLE := rt_task
+
+all: $(EXECUTABLE)
+
+%: %.c
+		$(CC) -o $@ $< $(CFLAGS) $(LDFLAGS)
+clean:
+		rm *.o 
+		rm $(EXECUTABLE)

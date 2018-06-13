@@ -1,0 +1,17 @@
+#ifndef MOTIONCOMMANDTYPE_H
+#define MOTIONCOMMANDTYPE_H
+
+#define MOTION_COMMAND_SINGLEAXISMOVE_TYPE 			10			//示教模式下的单轴运动命令号码
+#define MOTION_COMMAND_JOINTMOVE_TYPE					20			//队列命令中的movj
+#define MOTION_COMMAND_LINEARMOVE_TYPE					30			//队列命令中的movl
+#define MOTION_COMMAND_CIRCULARMOVE_TYPE				40			//队列命令中的movc
+#define MOTION_COMMAND_MOVEMENT_STOP_TYPE			50			//运动停止
+#define MOTION_COMMAND_SERVO_ENABLE_TYPE				60			//伺服使能
+#define MOTION_COMMAND_DESCARTES_LINEARMOVE_TYPE		70			//输入笛卡尔坐标系终点位置值的直线插补
+#define MOTION_COMMAND_SERVO_RESET_TYPE				80			//伺服复位指令。
+#define MOTION_COMMAND_DESCARTES_CIRCULARMOVE_TYPE	90			//输入笛卡尔坐标系终点位置值的圆弧插补。
+#define MOTION_COMMAND_TRAJ_PAUSE_TYPE				100			//运动暂停
+#define MOTION_COMMAND_TRAJ_RESUME_TYPE				110			//运动继续
+
+
+#endif
